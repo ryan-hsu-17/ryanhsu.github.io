@@ -52,7 +52,8 @@ function App() {
               <span className="text-davy_gray-600">•</span>
               <a
                 href="/resume.pdf"
-                download
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-tiffany_blue hover:text-non_photo_blue transition-colors duration-300 font-semibold"
               >
                 Résumé
