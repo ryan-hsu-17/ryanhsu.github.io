@@ -35,7 +35,7 @@ function App() {
               </a>
               <span className="text-davy_gray-600">•</span>
               <a
-                href="https://github.com/ryanhsu"
+                href="https://github.com/ryan-hsu-17"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-davy_gray-900 hover:text-tiffany_blue transition-colors duration-300"
