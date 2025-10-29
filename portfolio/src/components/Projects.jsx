@@ -13,6 +13,30 @@ const Projects = () => {
       ]
     },
     {
+      title: 'Pacman AI Game',
+      description: 'Implemented classic and informed search algorithms, multi-agent controllers, and reinforcement learning agents to solve maze navigation and increase win rate 8x (10% to 80%) against baselines.',
+      technologies: ['Python', 'AI/ML', 'Q-Learning', 'Bayes Nets', 'HMM'],
+      github: '#',
+      demo: '#',
+      achievements: [
+        'Implemented DFS, BFS, Uniform Cost, A* with admissible/consistent heuristics',
+        'Developed Minimax and Expectimax with alpha–beta pruning',
+        'Trained Q-learning agents and built probabilistic inference pipelines'
+      ]
+    },
+    {
+      title: 'Hume AI Poker Bot',
+      description: 'Created a bot that utilizes Hume AI\'s Expression Management API to detect key emotions that can dictate poker performance and skill level, integrated with ChatGPT API for game advice.',
+      technologies: ['Hume AI API', 'ChatGPT API', 'Python', 'Emotion Detection'],
+      github: '#',
+      demo: 'https://calhacks-hume-poker.vercel.app',
+      achievements: [
+        'Integrated Hume AI Expression Management API for emotion detection',
+        'Utilized ChatGPT API to advise players using probability and game state',
+        'Combined emotion analysis with strategic poker advice for new players'
+      ]
+    },
+    {
       title: 'Deep Learning with PyTorch',
       description: 'Implemented neural network architectures including MLPs, CNNs, and RNNs with attention mechanisms, achieving high accuracy on digit classification and language identification tasks through systematic hyperparameter tuning.',
       technologies: ['PyTorch', 'Deep Learning', 'CNNs', 'RNNs', 'Attention Mechanisms', 'Python'],
@@ -38,30 +62,6 @@ const Projects = () => {
         'Built ensemble model combining XGBoost, Random Forests, and Logistic Regression',
         'Performed extensive hyperparameter tuning and cross-validation for model optimization',
         'Analyzed feature importance to identify key survival predictors (gender, class, age, fare)'
-      ]
-    },
-    {
-      title: 'Pacman AI Game',
-      description: 'Implemented classic and informed search algorithms, multi-agent controllers, and reinforcement learning agents to solve maze navigation and increase win rate 8x (10% to 80%) against baselines.',
-      technologies: ['Python', 'AI/ML', 'Q-Learning', 'Bayes Nets', 'HMM'],
-      github: '#',
-      demo: '#',
-      achievements: [
-        'Implemented DFS, BFS, Uniform Cost, A* with admissible/consistent heuristics',
-        'Developed Minimax and Expectimax with alpha–beta pruning',
-        'Trained Q-learning agents and built probabilistic inference pipelines'
-      ]
-    },
-    {
-      title: 'Hume AI Poker Bot',
-      description: 'Created a bot that utilizes Hume AI\'s Expression Management API to detect key emotions that can dictate poker performance and skill level, integrated with ChatGPT API for game advice.',
-      technologies: ['Hume AI API', 'ChatGPT API', 'Python', 'Emotion Detection'],
-      github: '#',
-      demo: 'https://calhacks-hume-poker.vercel.app',
-      achievements: [
-        'Integrated Hume AI Expression Management API for emotion detection',
-        'Utilized ChatGPT API to advise players using probability and game state',
-        'Combined emotion analysis with strategic poker advice for new players'
       ]
     }
   ];

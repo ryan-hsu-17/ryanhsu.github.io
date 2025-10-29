@@ -66,7 +66,7 @@ const Education = () => {
   ];
 
   const certifications = [
-    { name: 'AWS Certified AI Practitioner', year: '2024', issuer: 'Amazon Web Services' }
+    { name: 'AWS Certified AI Practitioner', year: '2025', issuer: 'Amazon Web Services', url: 'https://www.credly.com/badges/e2bbc6e5-13db-46b8-8439-d285b38bc4f8/public_url' }
   ];
 
   const toggleDegree = (index) => {
@@ -167,14 +167,17 @@ const Education = () => {
           </h3>
           <div className="grid md:grid-cols-1 gap-4">
             {certifications.map((cert, index) => (
-              <div
+              <a
                 key={index}
-                className="bg-gradient-to-br from-tiffany_blue to-non_photo_blue-400 p-6 rounded-lg text-center hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+                href={cert.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-gradient-to-br from-tiffany_blue to-non_photo_blue-400 p-6 rounded-lg text-center hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl cursor-pointer block"
               >
                 <p className="text-black font-bold text-xl mb-2">{cert.name}</p>
                 <p className="text-jet font-semibold">{cert.issuer}</p>
                 <p className="text-jet font-medium text-sm mt-1">{cert.year}</p>
-              </div>
+              </a>
             ))}
           </div>
         </div>

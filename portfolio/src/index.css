@@ -257,25 +257,36 @@
   }
 
   [data-theme="light"] .bg-gradient-to-r {
-    background: linear-gradient(to right, #4db4b1, #70cbd2) !important;
+    background: linear-gradient(to right, #4db4b1, #70cbd2);
   }
 
-  /* Ensure gradient text with bg-gradient-to-r has no background blocks */
-  .bg-gradient-to-r.bg-clip-text {
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    -webkit-text-fill-color: transparent;
-    background-color: transparent !important;
-  }
-
-  [data-theme="light"] .bg-gradient-to-r.bg-clip-text {
+  /* Fix gradient text clipping in light mode */
+  [data-theme="light"] .bg-gradient-to-r.bg-clip-text.text-transparent,
+  [data-theme="light"] .bg-gradient-to-r.from-tiffany_blue.to-non_photo_blue.bg-clip-text.text-transparent,
+  [data-theme="light"] h1.bg-gradient-to-r.bg-clip-text.text-transparent,
+  [data-theme="light"] h2.bg-gradient-to-r.bg-clip-text.text-transparent,
+  [data-theme="light"] h3.bg-gradient-to-r.bg-clip-text.text-transparent,
+  [data-theme="light"] h4.bg-gradient-to-r.bg-clip-text.text-transparent {
     background: linear-gradient(to right, #4db4b1, #70cbd2) !important;
+    background-image: linear-gradient(to right, #4db4b1, #70cbd2) !important;
     -webkit-background-clip: text !important;
     background-clip: text !important;
-    color: transparent !important;
     -webkit-text-fill-color: transparent !important;
-    background-color: transparent !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  [data-theme="light"] span.bg-gradient-to-r.bg-clip-text.text-transparent,
+  [data-theme="light"] span.bg-gradient-to-r.from-tiffany_blue.to-non_photo_blue.bg-clip-text.text-transparent,
+  [data-theme="light"] h1 span.bg-gradient-to-r.bg-clip-text.text-transparent,
+  [data-theme="light"] h2 span.bg-gradient-to-r.bg-clip-text.text-transparent {
+    background: linear-gradient(to right, #4db4b1, #70cbd2) !important;
+    background-image: linear-gradient(to right, #4db4b1, #70cbd2) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
   }
 
   /* Button gradients */
@@ -336,64 +347,4 @@
     overflow: hidden;
   }
 
-  /* Fix gradient text in light mode - remove background blocks */
-  .bg-clip-text {
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  [data-theme="light"] .bg-clip-text {
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  /* Ensure gradient text headings work properly */
-  h1.bg-clip-text,
-  h2.bg-clip-text,
-  h3.bg-clip-text,
-  h4.bg-clip-text {
-    background-color: transparent !important;
-  }
-
-  [data-theme="light"] h1.bg-clip-text,
-  [data-theme="light"] h2.bg-clip-text,
-  [data-theme="light"] h3.bg-clip-text,
-  [data-theme="light"] h4.bg-clip-text {
-    background: linear-gradient(to right, #4db4b1, #70cbd2) !important;
-    -webkit-background-clip: text !important;
-    background-clip: text !important;
-    -webkit-text-fill-color: transparent !important;
-  }
-
-  /* Make sure text-transparent is properly applied */
-  .text-transparent {
-    color: transparent !important;
-    -webkit-text-fill-color: transparent !important;
-  }
-
-  /* Additional gradient text fixes for light mode */
-  [data-theme="light"] span.bg-gradient-to-r.bg-clip-text,
-  [data-theme="light"] span.text-transparent {
-    background: linear-gradient(to right, #4db4b1, #70cbd2) !important;
-    -webkit-background-clip: text !important;
-    background-clip: text !important;
-    -webkit-text-fill-color: transparent !important;
-  }
-
-  /* Remove any potential background on elements with gradient text */
-  [data-theme="light"] .bg-clip-text::before,
-  [data-theme="light"] .bg-clip-text::after {
-    display: none;
-  }
-
-  /* Ensure inline gradient text works properly */
-  [data-theme="light"] h1 .bg-clip-text,
-  [data-theme="light"] h1 .text-transparent {
-    background: linear-gradient(to right, #4db4b1, #70cbd2) !important;
-    -webkit-background-clip: text !important;
-    background-clip: text !important;
-    -webkit-text-fill-color: transparent !important;
-  }
 }

@@ -2,6 +2,17 @@ const Experience = () => {
   const experiences = [
     {
       title: 'Software Engineer Intern',
+      company: 'WittGen Biotechnologies',
+      period: 'Oct 2025 – Present',
+      description: 'Constructing and redeveloping the company website using Next.js, TailwindCSS, and AWS deployment with CI/CD pipelines to improve user experience and modernize the technology stack.',
+      achievements: [
+        'Building modern, responsive website with Next.js and TailwindCSS',
+        'Implementing AWS deployment infrastructure with CI/CD pipelines for automated deployment',
+        'Collaborating with stakeholders to gather requirements and implement new features'
+      ]
+    },
+    {
+      title: 'Software Engineer Intern',
       company: 'HopeKCC',
       period: 'June 2025 – Sept 2025',
       description: 'Collaborated on an open-source, cross-platform music synchronization app enabling real-time display of ChordPro scores, developed by interns across web, mobile, backend, and QA teams under Agile workflows.',
