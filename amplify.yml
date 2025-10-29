@@ -1,14 +1,12 @@
 version: 1
-frontend:
-  phases:
-    preBuild:
-      - npm ci --prefix portfolio
-    build:
-      - npm run build --prefix portfolio
-  artifacts:
-    baseDirectory: portfolio/dist
-    files:
-      - '**/*'
-  cache:
-    paths:
-      - portfolio/node_modules/**/*
+applications:
+  - appRoot: portfolio
+    frontend:
+      phases:
+        preBuild: [npm ci]
+        build: [npm run build]
+      artifacts:
+        baseDirectory: dist
+        files: ['**/*']
+      cache:
+        paths: [node_modules/**/*]
